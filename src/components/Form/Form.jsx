@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Container, Button, MainTitle, Label, Input } from '../Main.styled';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
-import { addContact } from 'redux/contacts/contacts-slice';
+import { addContact } from 'redux/contacts/items-slice';
 import { useDispatch } from 'react-redux';
 
 export default function Form({ onSubmit }) {

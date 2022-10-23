@@ -3,8 +3,8 @@ import { MainTitle } from "components/Main.styled";
 import PropTypes from 'prop-types';
 
 import { useSelector, useDispatch } from "react-redux";
-import { removeContact } from "redux/contacts/contacts-slice";
-import { getFilteredContacts } from "redux/contacts/contacts-selector";
+import { removeContact } from "redux/contacts/items-slice";
+import { getFilteredContacts } from "redux/contacts/items-selectors";
 
 export default function ContactList() {
 
