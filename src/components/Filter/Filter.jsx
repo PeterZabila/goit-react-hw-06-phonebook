@@ -1,5 +1,5 @@
 import { Label, Input, MainTitle } from '../Main.styled';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filter/filter-slice';
 import { getFilter } from 'redux/filter/filter-selectors';
@@ -29,7 +29,7 @@ export default function Filter () {
      ) 
 }
 
-Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-}
+// Filter.propTypes = {
+//   value: PropTypes.string.isRequired,
+//   onChange: PropTypes.func.isRequired,
+// }
