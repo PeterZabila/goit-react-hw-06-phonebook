@@ -10,8 +10,7 @@ import { nanoid } from "nanoid";
 
   const itemsSlice = createSlice({
     name: "items",
-    initialState: [
-      ],
+    initialState: [],
     reducers: {
         addContact: {
             reducer: (store, {payload}) => {

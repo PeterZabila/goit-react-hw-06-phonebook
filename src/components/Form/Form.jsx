@@ -7,6 +7,7 @@ import { getFilteredContacts } from "../../redux/contacts/items-selectors";
 export default function Form() {
     const dispatch = useDispatch();
     const contacts = useSelector(getFilteredContacts);
+
    
 const [name, setName] = useState('');
 const [number, setNumber] = useState('');
@@ -33,11 +34,10 @@ const handleChange = e => {
 
   const handleSubmit = e => {
         e.preventDefault();
-        // const storageContacts = localStorage.getItem("items");
-        // console.log(storageContacts);
-        const duplicated = contacts.map(contact => name.toLowerCase() === contact.name.toLowerCase());
-        if(duplicated?.length > 0) {
-            alert(name + 'is already in contacts');
+
+        const duplicated = contacts.findIndex(contact => e.target.elements.name.value.toLowerCase() === contact.name.toLowerCase())
+            if(duplicated > - 1) {
+            alert(e.target.elements.name.value + ' is already in contacts');
             return;
         }
 
